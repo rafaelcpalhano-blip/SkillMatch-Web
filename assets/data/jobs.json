@@ -1,0 +1,50 @@
+[
+    {
+        "empresa": "PixelCode Digital",
+        "cargo": "Programador Web Júnior",
+        "requisitos": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React",
+            "Git"
+        ],
+        "experiencia": "6 meses"
+    },
+    {
+        "empresa": "TechNova Sistemas",
+        "cargo": "Desenvolvedor Front-End Júnior",
+        "requisitos": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Git",
+            "Responsividade"
+        ],
+        "experiencia": "6 meses"
+    },
+    {
+        "empresa": "WebStart Solutions",
+        "cargo": "Desenvolvedor React Júnior",
+        "requisitos": [
+            "JavaScript",
+            "React",
+            "Git",
+            "APIs",
+            "Responsividade"
+        ],
+        "experiencia": "1 ano"
+    },
+    {
+        "empresa": "Órbita Tecnologia",
+        "cargo": "Desenvolvedor Front-End Júnior",
+        "requisitos": [
+            "JavaScript",
+            "React",
+            "TypeScript",
+            "APIs",
+            "Testes automatizados"
+        ],
+        "experiencia": "1 ano"
+    }
+]
