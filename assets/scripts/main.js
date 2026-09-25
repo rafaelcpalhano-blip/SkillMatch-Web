@@ -1,21 +1,32 @@
 import { VagaFrontEnd } from "./engine.js";
 
-const vagas = [
-  
-    new VagaFrontEnd(
-        "PixelCode Digital",
-        "Programador Web Júnior",
-        [
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "React",
-            "Git"
-        ],
-        "6 meses"
-    ),
+async function carregarVagas() {
+    const caminhoVagas = "./assets/data/jobs.json";
 
-];
+try {
+const response = await fetch(caminhoVagas);
+
+    if (response.ok == false) {
+        throw new Error(`Erro ao carregar o arquivo JSON: ${response.status}`);
+    }
+
+const data = await response.json();
+
+const vagas = data.map((vagaData) => new VagaFrontEnd(
+    vagaData.empresa,
+    vagaData.cargo,
+    vagaData.requisitos,
+    vagaData.experiencia
+),
+);
+
+console.log(vagas[3].analisarVaga(candidato));
+
+    
+} catch (error) {
+    console.error("Erro ao carregar vagas:", error);
+}
+}
 
 const candidato = {             // Objeto com os dados do candidato
     nome: "Rafael Palhano",
@@ -30,9 +41,4 @@ const candidato = {             // Objeto com os dados do candidato
     tempoExperiencia: "6 meses",
 };
 
-    const resultado = vagas[0].analisarVaga(candidato)
-    const resultado2 = vagas[0].apresentarVaga()
-
-    
-  console.log(resultado);
-  console.log(resultado2);
+carregarVagas()
