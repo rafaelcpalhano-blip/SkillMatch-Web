@@ -1,109 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Analise a compatibilidade do seu perfil com vagas de desenvolvimento web.">
     <link rel="stylesheet" href="./assets/styles/index.styles.css">
-    <title>Novo Cadastro</title>
-
+    <title>SkillMatch</title>
 </head>
-
 <body>
-    <header>
-        <h1>SkillMatch - Novo Cadastro</h1>
-
-        <nav aria-label="Navegação principal">
-            <a href="./index.html">Novo Perfil</a>
-            <a href="#">Histórico de Candidatos</a>
-        </nav>
-    </header>
-
-    <main>
-        <section id="profile" aria-labelledby="profile-title">
-            <h2 id="profile-title">Novo perfil</h2>
-
-            <form id="profile-form">
-                <label for="candidatename">Nome</label>
-                <input id="candidatename" name="candidateName" type="text" required>
-
-                <fieldset>
-                    <legend>Área de interesse</legend>
-                    <ul>
-                        <li>
-                            <input id="area-front-end" name="interestArea" type="radio"
-                                value="Desenvolvimento Front-End" required>
-                            <label for="area-front-end">Desenvolvimento Front-End</label>
-                        </li>
-                        <li>
-                            <input id="area-web" name="interestArea" type="radio" value="Desenvolvimento Web">
-                            <label for="area-web">Desenvolvimento Web</label>
-                        </li>
-                        <li>
-                            <input id="area-react" name="interestArea" type="radio" value="Desenvolvimento React">
-                            <label for="area-react">Desenvolvimento React</label>
-                        </li>
-                    </ul>
-                </fieldset>
-
-                <fieldset>
-                    <legend>Habilidades</legend>
-                  <p>Selecione pelo menos 5 habilidades que você possui:</p>
-                    <ul>
-                        <li><input id="skill-html" name="skills" type="checkbox" value="HTML">
-                            <label for="skill-html">HTML</label>
-                        </li>
-                        <li><input id="skill-css" name="skills" type="checkbox" value="CSS">
-                            <label for="skill-css">CSS</label>
-                        </li>
-                        <li><input id="skill-javascript" name="skills" type="checkbox" value="JavaScript">
-                            <label for="skill-javascript">JavaScript</label>
-                        </li>
-                        <li><input id="skill-git" name="skills" type="checkbox" value="Git">
-                            <label for="skill-git">Git</label>
-                        </li>
-                        <li><input id="skill-responsive" name="skills" type="checkbox" value="Responsividade">
-                            <label for="skill-responsive">Responsividade</label>
-                        </li>
-                        <li><input id="skill-react" name="skills" type="checkbox" value="React">
-                            <label for="skill-react">React</label>
-                        </li>
-                        <li><input id="skill-apis" name="skills" type="checkbox" value="APIs">
-                            <label for="skill-apis">APIs</label>
-                        </li>
-                        <li><input id="skill-typescript" name="skills" type="checkbox" value="TypeScript">
-                            <label for="skill-typescript">TypeScript</label>
-                        </li>
-                        <li><input id="skill-tests" name="skills" type="checkbox" value="Testes automatizados">
-                            <label for="skill-tests">Testes automatizados</label>
-                        </li>
-                    </ul>
-                </fieldset>
-
-                <label for="experience">Tempo de experiência</label>
-                <select id="experience" name="experience" required>
-                    <option value="" selected disabled>Selecione uma opção</option>
-                    <option value="6 meses">6 meses ou mais</option>
-                    <option value="1 ano">1 ano ou mais</option>
-                    <option value="2 anos">2 anos ou mais</option>
-                </select>
-                <button type="submit">Analisar vagas</button>
-            </form>
-        </section>
-
-        <section id="results" aria-labelledby="results-title">
-            <h2 id="results-title">Resultados</h2>
-            <p>Preencha seu perfil para analisar as vagas.</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>SkillMatch</p>
-    </footer>
-
-
+         <h1>SkillMatch</h1>
     <script type="module" src="./assets/scripts/main.js"></script>
 </body>
-
 </html>
