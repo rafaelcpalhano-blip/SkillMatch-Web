@@ -5,6 +5,7 @@ class Vaga {                   // Classe com constructor, atributos e método
         this.empresa = empresa;
         this.cargo = cargo;
         this.requisitos = requisitos;
+
     };
 
     apresentarVaga() {         // Método da classe
@@ -50,15 +51,16 @@ class Vaga {                   // Classe com constructor, atributos e método
 };
 
 export class VagaFrontEnd extends Vaga { // Herança com extends
-    constructor(empresa, cargo, requisitos, experiencia) {
+    constructor(empresa, cargo, requisitos, experiencia, area) {
         super(empresa, cargo, requisitos); // super chama o constructor da classe Vaga
         this.experiencia = experiencia; // Subclasse adiciona novo atributo e utiliza this
+        this.area = area;
     };
 
-apresentarVaga() {
-    const descricaoVaga = super.apresentarVaga();
-    return `${descricaoVaga}. Experiência exigida: ${this.experiencia}`;
-}
+    apresentarVaga() {
+        const descricaoVaga = super.apresentarVaga();
+        return `${descricaoVaga}. Experiência exigida: ${this.experiencia}`;
+    }
 
 };
 
