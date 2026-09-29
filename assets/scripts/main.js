@@ -1,5 +1,6 @@
 import { VagaFrontEnd } from "./engine.js";
-import {readCandidateProfile } from "./profile.js";
+import { readCandidateProfile } from "./profile.js";
+import { renderResults } from "./results.js";
 
 const form = document.getElementById("profile-form");
 
@@ -18,7 +19,8 @@ if (!vagas) {
 }
 
 const resultados = vagas.map((vaga) => vaga.analisarVaga(candidateProfile));
-console.log(resultados);
+//console.log(resultados);
+renderResults(resultados);
 });
 
 async function carregarVagas() {
