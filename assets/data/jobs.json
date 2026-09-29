@@ -2,6 +2,7 @@
     {
         "empresa": "PixelCode Digital",
         "cargo": "Programador Web Júnior",
+        "area": "Desenvolvimento Web",
         "requisitos": [
             "HTML",
             "CSS",
@@ -14,6 +15,7 @@
     {
         "empresa": "TechNova Sistemas",
         "cargo": "Desenvolvedor Front-End Júnior",
+        "area": "Desenvolvimento Front-End",
         "requisitos": [
             "HTML",
             "CSS",
@@ -26,6 +28,7 @@
     {
         "empresa": "WebStart Solutions",
         "cargo": "Desenvolvedor React Júnior",
+        "area": "Desenvolvimento React",
         "requisitos": [
             "JavaScript",
             "React",
@@ -38,6 +41,7 @@
     {
         "empresa": "Órbita Tecnologia",
         "cargo": "Desenvolvedor Front-End Júnior",
+        "area": "Desenvolvimento Front-End",
         "requisitos": [
             "JavaScript",
             "React",
