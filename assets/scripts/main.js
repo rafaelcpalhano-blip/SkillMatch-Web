@@ -2,6 +2,7 @@ import { VagaFrontEnd } from "./engine.js";
 import { readCandidateProfile } from "./profile.js";
 import { renderResults } from "./results.js";
 import { chooseBestJob } from "./recommendation.js";
+import { saveCandidateSearch } from "./history-storage.js";
 
 const form = document.getElementById("profile-form");
 
@@ -28,6 +29,7 @@ form.addEventListener("submit", async function (event) {
     const resultados = vagas.map((vaga) => vaga.analisarVaga(candidateProfile));
 
     renderResults(resultados, melhorVaga, candidateProfile);
+    saveCandidateSearch(candidateProfile, melhorVaga);
 
 
 });
