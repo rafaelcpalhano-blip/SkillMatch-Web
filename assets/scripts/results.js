@@ -58,3 +58,14 @@ export function renderResults(resultados, melhorVaga, candidateProfile) {
 
     section.replaceChildren(title, recommendationTitle, recommendation, list);
 }
+
+export function renderStatus(message) {
+    const resultsSection = document.getElementById("results");
+    const title = document.getElementById("results-title");
+    const status = document.createElement("p");
+
+    status.setAttribute("role", "status");
+    status.textContent = message;
+
+    resultsSection.replaceChildren(title, status);
+}

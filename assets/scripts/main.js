@@ -1,8 +1,9 @@
 import { VagaFrontEnd } from "./engine.js";
 import { readCandidateProfile } from "./profile.js";
-import { renderResults } from "./results.js";
+import { renderResults, renderStatus } from "./results.js";
 import { chooseBestJob } from "./recommendation.js";
 import { saveCandidateSearch } from "./history-storage.js";
+
 
 const form = document.getElementById("profile-form");
 
@@ -15,14 +16,22 @@ form.addEventListener("submit", async function (event) {
         return;
     }
 
+    renderStatus("Carregando vagas...");
+
     const vagas = await carregarVagas();
 
 
     if (!vagas) {
+        renderStatus("Não foi possível carregar as vagas. Tente novamente.");
         return;
     }
 
-   
+    if (vagas.length === 0) {
+        renderStatus("Nenhuma vaga está disponível no momento.");
+        return;
+    }
+
+
     const melhorVaga = chooseBestJob(vagas, candidateProfile);
 
 
