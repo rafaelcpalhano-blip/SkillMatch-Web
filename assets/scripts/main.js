@@ -7,6 +7,12 @@ import { saveCandidateSearch } from "./history-storage.js";
 
 const form = document.getElementById("profile-form");
 
+const clearButton = document.getElementById("clear-form");
+
+clearButton.addEventListener("click", function () {
+    form.reset();
+});
+
 form.addEventListener("submit", async function (event) {
     event.preventDefault();
 
