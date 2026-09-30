@@ -1,8 +1,8 @@
-import { VagaFrontEnd } from "./engine.js";
 import { readCandidateProfile } from "./profile.js";
 import { renderResults, renderStatus } from "./results.js";
 import { chooseBestJob } from "./recommendation.js";
 import { saveCandidateSearch } from "./history-storage.js";
+import { carregarVagas } from "./job-data.js";
 
 
 const form = document.getElementById("profile-form");
@@ -49,33 +49,6 @@ form.addEventListener("submit", async function (event) {
 
 });
 
-async function carregarVagas() {
-    const caminhoVagas = "./assets/data/jobs.json";
 
-    try {
-        const response = await fetch(caminhoVagas);
-
-        if (response.ok == false) {
-            throw new Error(`Erro ao carregar o arquivo JSON: ${response.status}`);
-        }
-
-        const data = await response.json();
-
-        const vagas = data.map((vagaData) => new VagaFrontEnd(
-            vagaData.empresa,
-            vagaData.cargo,
-            vagaData.requisitos,
-            vagaData.experiencia,
-            vagaData.area
-        ),
-        );
-
-        return vagas;
-
-
-    } catch (error) {
-        console.error("Erro ao carregar vagas:", error);
-    }
-}
 
 
