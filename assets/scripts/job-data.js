@@ -7,8 +7,9 @@ export async function carregarVagas() {
         const response = await fetch(caminhoVagas);
 
         if (response.ok == false) {
-            throw new Error(`Erro ao carregar o arquivo JSON: ${response.status}`);
-        }
+    console.error("Erro ao carregar o arquivo JSON:", response.status);
+    return null;
+}
 
         const data = await response.json();
 
