@@ -49,7 +49,7 @@
 
                 <fieldset>
                     <legend>Habilidades</legend>
-                  <p>Selecione pelo menos 5 habilidades que você possui:</p>
+                    <p>Selecione pelo menos 5 habilidades que você possui:</p>
                     <ul>
                         <li><input id="skill-html" name="skills" type="checkbox" value="HTML">
                             <label for="skill-html">HTML</label>
@@ -90,15 +90,21 @@
                     <option value="2 anos">2 anos ou mais</option>
                 </select>
                 <div>
-                <button type="submit">Analisar vagas</button>
-                <button type="reset" id="clear-form">Limpar</button>
+                    <button type="submit">Analisar vagas</button>
+                    <button type="reset" id="clear-form">Limpar</button>
                 </div>
             </form>
+
+            <p id="search-counter" role="status">
+                Pesquisas concluídas nesta sessão: 0
+            </p>
+
         </section>
 
         <section id="results" aria-labelledby="results-title">
             <h2 id="results-title">Resultados</h2>
             <p>Preencha seu perfil para analisar as vagas.</p>
+
         </section>
     </main>
 
