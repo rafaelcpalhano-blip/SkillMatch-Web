@@ -9,12 +9,6 @@ import { createSearchCounter } from "./search-counter.js";
 
 const form = document.getElementById("profile-form");
 
-const clearButton = document.getElementById("clear-form");
-
-clearButton.addEventListener("click", function () {
-    form.reset();
-});
-
 const countSearch = createSearchCounter();
 
 form.addEventListener("submit", async function (event) {

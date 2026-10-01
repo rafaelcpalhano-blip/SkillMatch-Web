@@ -6,13 +6,22 @@ export function getCandidateHistory() {
 }
 
 export function saveCandidateSearch(candidateProfile, bestJob) {
-    const recommendation = bestJob
-        ? {
-            ...bestJob.analisarVaga(candidateProfile),
+    let recommendation = null;
+
+    if (bestJob !== null) {
+        const analysis = bestJob.analisarVaga(candidateProfile);
+
+        recommendation = {
+            empresa: analysis.empresa,
+            cargo: analysis.cargo,
+            requisitosAtendidos: analysis.requisitosAtendidos,
+            requisitosFaltantes: analysis.requisitosFaltantes,
+            percentualCompatibilidade: analysis.percentualCompatibilidade,
+            classificacao: analysis.classificacao,
             area: bestJob.area,
             experiencia: bestJob.experiencia
-        }
-        : null;
+        };
+    }
 
     const entry = {
         data: new Date().toISOString(),
@@ -21,6 +30,13 @@ export function saveCandidateSearch(candidateProfile, bestJob) {
     };
 
     const history = getCandidateHistory();
-    history.unshift(entry);
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(history));
+    const updatedHistory = [];
+
+updatedHistory.push(entry);
+
+for (let i = 0; i < history.length; i++) {
+    updatedHistory.push(history[i]);
+}
+
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(updatedHistory));
 }

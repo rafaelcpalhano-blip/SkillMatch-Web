@@ -3,7 +3,9 @@ export function renderResults(resultados, melhorVaga, candidateProfile, studyRec
     const title = section.querySelector("h2");
     const list = document.createElement("ul");
 
-    for (const resultado of resultados) {
+    for (let i = 0; i < resultados.length; i++) {
+        const resultado = resultados[i];
+
         const item = document.createElement("li");
 
         const empresa = document.createElement("h3");
