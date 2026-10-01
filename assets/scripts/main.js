@@ -3,6 +3,8 @@ import { renderResults, renderStatus } from "./results.js";
 import { chooseBestJob } from "./recommendation.js";
 import { saveCandidateSearch } from "./history-storage.js";
 import { carregarVagas } from "./job-data.js";
+import { createSearchCounter } from "./search-counter.js";
+
 
 
 const form = document.getElementById("profile-form");
@@ -12,6 +14,8 @@ const clearButton = document.getElementById("clear-form");
 clearButton.addEventListener("click", function () {
     form.reset();
 });
+
+const countSearch = createSearchCounter();
 
 form.addEventListener("submit", async function (event) {
     event.preventDefault();
@@ -39,12 +43,15 @@ form.addEventListener("submit", async function (event) {
 
 
     const melhorVaga = chooseBestJob(vagas, candidateProfile);
-
-
     const resultados = vagas.map((vaga) => vaga.analisarVaga(candidateProfile));
 
     renderResults(resultados, melhorVaga, candidateProfile);
     saveCandidateSearch(candidateProfile, melhorVaga);
+    
+    const totalSearches = countSearch();
+    const counter = document.getElementById("search-counter");
+    
+    counter.textContent = `Pesquisas concluídas nesta sessão: ${totalSearches}`;
 
 
 });
