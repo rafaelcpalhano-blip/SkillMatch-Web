@@ -4,6 +4,217 @@
     box-sizing: border-box;
 }
 
-h1 {
-    color: red;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #000000;
+    background-color: #008080;
 }
+
+header,
+main,
+footer {
+    width: 92%;
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: #c0c0c0;
+}
+
+header {
+    margin-top: 24px;
+    padding: 8px;
+    border: 2px solid #ffffff;
+}
+
+h1 {
+    padding: 6px 10px;
+    margin-bottom: 12px;
+    font-size: 24px;
+    color: #ffffff;
+    background-color: #000080;
+}
+
+h1 img {
+    width: 250px;
+    max-width: 100%;
+    height: auto;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 4px;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+    border: 2px solid #808080;
+}
+
+section {
+    padding: 12px;
+    border: 1px solid #808080;
+}
+
+h2 {
+    padding: 4px 8px;
+    margin-bottom: 16px;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #000080;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+fieldset {
+    padding: 12px;
+    border: 1px solid #808080;
+}
+
+legend {
+    padding: 0 6px;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+input,
+select,
+button {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+input[type="text"],
+select {
+    padding: 8px;
+    border: 2px solid #808080;
+    background-color: #ffffff;
+}
+
+nav a,
+button {
+    padding: 6px 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #000000;
+    background-color: #c0c0c0;
+    border: 2px solid #808080;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav a:hover,
+button:hover {
+    background-color: #d8d8d8;
+}
+
+nav a:active,
+button:active {
+    background-color: #000080;
+    color: #ffffff;
+}
+
+#skills-error {
+    color: #800000;
+}
+
+#results li,
+#history-list article {
+    margin-bottom: 16px;
+    padding: 12px;
+    border: 1px solid #808080;
+    background-color: #ffffff;
+}
+
+.recommended-job {
+    border-left: 4px solid #000080;
+}
+
+footer {
+    padding: 12px;
+    margin-bottom: 24px;
+    text-align: center;
+    border: 2px solid #808080;
+    font-size: 13px;
+}
+
+
+
+
+
+
+
+/*
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #1f2937;
+    background-color: #f3f4f6;
+}
+
+header,
+main,
+footer {
+    width: 92%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+header {
+    padding: 24px 0;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 16px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+nav a {
+    color: #1d4ed8;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+section {
+    padding: 16px;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+h2 {
+    margin-bottom: 16px;
+}
+
+footer {
+    padding: 24px 0;
+    text-align: center;
+}
+
+
+*/
