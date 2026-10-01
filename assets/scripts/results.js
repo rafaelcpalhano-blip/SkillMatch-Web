@@ -1,4 +1,4 @@
-export function renderResults(resultados, melhorVaga, candidateProfile) {
+export function renderResults(resultados, melhorVaga, candidateProfile, studyRecommendation) {
     const section = document.getElementById("results");
     const title = section.querySelector("h2");
     const list = document.createElement("ul");
@@ -54,9 +54,12 @@ export function renderResults(resultados, melhorVaga, candidateProfile) {
         recommendation.textContent =
             `Para ${candidateProfile.nome}, ${melhorVaga.cargo}: ` +
             `Empresa ${melhorVaga.empresa}.`;
-    }
+        }
+        
+    const study = document.createElement("p");
+    study.textContent = studyRecommendation;
 
-    section.replaceChildren(title, recommendationTitle, recommendation, list);
+    section.replaceChildren(title, recommendationTitle, recommendation, study, list);
 }
 
 export function renderStatus(message) {
