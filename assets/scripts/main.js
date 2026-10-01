@@ -1,6 +1,6 @@
 import { readCandidateProfile } from "./profile.js";
 import { renderResults, renderStatus } from "./results.js";
-import { chooseBestJob } from "./recommendation.js";
+import { chooseBestJob, recommendStudy } from "./recommendation.js";
 import { saveCandidateSearch } from "./history-storage.js";
 import { carregarVagas } from "./job-data.js";
 import { createSearchCounter } from "./search-counter.js";
@@ -44,8 +44,9 @@ form.addEventListener("submit", async function (event) {
 
     const melhorVaga = chooseBestJob(vagas, candidateProfile);
     const resultados = vagas.map((vaga) => vaga.analisarVaga(candidateProfile));
+    const studyRecommendation = recommendStudy(resultados);
 
-    renderResults(resultados, melhorVaga, candidateProfile);
+    renderResults(resultados, melhorVaga, candidateProfile, studyRecommendation);
     saveCandidateSearch(candidateProfile, melhorVaga);
     
     const totalSearches = countSearch();
