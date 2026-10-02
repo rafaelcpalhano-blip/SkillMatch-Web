@@ -128,7 +128,8 @@ button:active {
     color: #ffffff;
 }
 
-#skills-error {
+#skills-error,
+#name-error {
     color: #800000;
 }
 
