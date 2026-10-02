@@ -1,6 +1,13 @@
 export function readCandidateProfile(form) {
     const nameInput = document.getElementById("candidatename");
     const candidateName = nameInput.value.trim();
+    const nameError = document.getElementById("name-error");
+    nameError.textContent = "";
+
+    if (candidateName === "") {
+        nameError.textContent = "Por favor, informe um nome válido.";
+        return null;
+    }
     const selectedArea = form.querySelector('input[name="interestArea"]:checked');
     const interestArea = selectedArea.value;
     const selectedSkills = form.querySelectorAll('input[name="skills"]:checked');
