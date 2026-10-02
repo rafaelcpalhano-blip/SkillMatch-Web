@@ -37,6 +37,7 @@ export function renderResults(resultados, melhorVaga, candidateProfile, studyRec
         ) {
             const destaque = document.createElement("p");
             destaque.textContent = "Vaga recomendada";
+            destaque.classList.add("recommended-label");
             item.prepend(destaque);
             item.classList.add("recommended-job");
         }
