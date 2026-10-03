@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    <!-- Cabeçalho com logo e navegação principal -->
     <header>
         <h1>
             <img src="./assets/images/Título - logo.png" alt="Skill Match" width="600" height="200">
@@ -23,14 +24,17 @@
     </header>
 
     <main>
+        <!-- Formulário para preenchimento do perfil do candidato -->
         <section id="profile" aria-labelledby="profile-title">
             <h2 id="profile-title">Novo Candidato</h2>
 
             <form id="profile-form">
+                 <!-- Nome do candidato -->
                 <label for="candidatename">Nome Completo</label>
                 <input id="candidatename" name="candidateName" type="text" required>
                 <p id="name-error" role="alert"></p>
 
+                <!-- Seleção da área de interesse -->
                 <fieldset>
                     <legend>Área de interesse</legend>
                     <ul>
@@ -50,6 +54,7 @@
                     </ul>
                 </fieldset>
 
+                <!-- Seleção das habilidades do candidato -->
                 <fieldset>
                     <legend>Habilidades</legend>
                     <p>Selecione pelo menos 5 habilidades que você possui:</p>
@@ -85,6 +90,7 @@
                     <p id="skills-error" role="alert"></p>
                 </fieldset>
 
+                <!-- Seleção do tempo de experiência -->
                 <label for="experience">Tempo de experiência</label>
                 <select id="experience" name="experience" required>
                     <option value="" selected disabled>Selecione uma opção</option>
@@ -92,18 +98,22 @@
                     <option value="1 ano">1 ano ou mais</option>
                     <option value="2 anos">2 anos ou mais</option>
                 </select>
+
+                <!-- Ações do formulário -->
                 <div>
                     <button type="submit">Analisar vagas</button>
                     <button type="reset" id="clear-form">Limpar</button>
                 </div>
             </form>
 
+            <!-- Exibe a quantidade de pesquisas realizadas durante a sessão -->
             <p id="search-counter" role="status">
                 Pesquisas concluídas nesta sessão: 0
             </p>
 
         </section>
 
+        <!-- Área onde os resultados da análise serão exibidos -->
         <section id="results" aria-labelledby="results-title">
             <h2 id="results-title">Resultados</h2>
             <p>Preencha seu perfil para analisar as vagas.</p>
@@ -111,12 +121,13 @@
         </section>
     </main>
 
+    <!-- Rodapé com informações do projeto -->
     <footer>
         <p>© 2026 Skill Match — Desenvolvido por Rafael para fins educacionais.</p>
         <p>
-        Contato:
-        <a href="mailto:rafaelcpalhano@gmail.com">rafaelcpalhano@gmail.com</a>
-    </p>
+            Contato:
+            <a href="mailto:rafaelcpalhano@gmail.com">rafaelcpalhano@gmail.com</a>
+        </p>
     </footer>
 
 

@@ -1,14 +1,20 @@
+// Importa a função responsável por recuperar o histórico salvo
 import { getCandidateHistory } from "./history-storage.js";
 
 const historyList = document.getElementById("history-list");
+
+// Recupera todas as pesquisas salvas
 const entries = getCandidateHistory();
 
 if (entries.length > 0) {
+    // Remove a mensagem inicial antes de exibir o histórico
     historyList.replaceChildren();
-
+    
+    // Cria um card para cada pesquisa salva
     entries.forEach((entry) => {
         const card = document.createElement("article");
 
+        // Dados do candidato
         const name = document.createElement("h3");
         name.textContent = entry.candidato.nome;
 
@@ -26,11 +32,13 @@ if (entries.length > 0) {
 
         card.append(name, date, area, skills, experience);
 
+        // Título da recomendação
         const recommendationTitle = document.createElement("h4");
         recommendationTitle.textContent = "Vaga recomendada";
 
         card.append(recommendationTitle);
 
+        // Exibe os dados da vaga recomendada, caso exista
         if (entry.recomendacao) {
             const job = entry.recomendacao;
 
@@ -60,11 +68,13 @@ if (entries.length > 0) {
 
             card.append(company, role, jobArea, requiredExperience, classification, match, matched, missing);
         } else {
+            // Mensagem exibida quando não existe vaga recomendada
             const message = document.createElement("p");
             message.textContent = "Nenhuma vaga recomendada nesta pesquisa.";
             card.append(message);
         }
 
+        // Adiciona o card à lista do histórico
         historyList.append(card);
     });
 }
