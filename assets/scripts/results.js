@@ -1,13 +1,16 @@
+// Exibe os resultados da análise e a recomendação final
 export function renderResults(resultados, melhorVaga, candidateProfile, studyRecommendation) {
     const section = document.getElementById("results");
     const title = section.querySelector("h2");
     const list = document.createElement("ul");
 
+    // Cria um item para cada resultado analisado
     for (let i = 0; i < resultados.length; i++) {
         const resultado = resultados[i];
 
         const item = document.createElement("li");
 
+        // Dados da vaga analisada
         const empresa = document.createElement("h3");
         empresa.textContent = `Empresa: ${resultado.empresa}`;
 
@@ -30,6 +33,8 @@ export function renderResults(resultados, melhorVaga, candidateProfile, studyRec
             `Requisitos faltantes: ${resultado.requisitosFaltantes.join(", ") || "Nenhum"}`;
 
         item.append(empresa, cargo, classificacao, compatibilidade, atendidos, faltantes);
+        
+        // Destaca visualmente a vaga recomendada
         if (
             melhorVaga !== null &&
             resultado.empresa === melhorVaga.empresa &&
@@ -43,11 +48,13 @@ export function renderResults(resultados, melhorVaga, candidateProfile, studyRec
         }
         list.appendChild(item);
     }
+    // Cria a recomendação principal
     const recommendationTitle = document.createElement("h3");
     recommendationTitle.textContent = "Recomendação";
 
     const recommendation = document.createElement("p");
 
+    // Exibe mensagem diferente quando nenhuma vaga é compatível
     if (melhorVaga === null) {
         recommendation.textContent =
             "Nenhuma vaga reúne a área escolhida, a experiência exigida " +
@@ -57,14 +64,17 @@ export function renderResults(resultados, melhorVaga, candidateProfile, studyRec
         recommendation.textContent =
             `Para ${candidateProfile.nome}, ${melhorVaga.cargo}: ` +
             `Empresa ${melhorVaga.empresa}.`;
-        }
-        
+    }
+
+    // Exibe a recomendação de estudo
     const study = document.createElement("p");
     study.textContent = studyRecommendation;
 
+    // Atualiza a área de resultados
     section.replaceChildren(title, recommendationTitle, recommendation, study, list);
 }
 
+// Exibe mensagens temporárias de status na área de resultados
 export function renderStatus(message) {
     const resultsSection = document.getElementById("results");
     const title = document.getElementById("results-title");
@@ -73,5 +83,6 @@ export function renderStatus(message) {
     status.setAttribute("role", "status");
     status.textContent = message;
 
+    // Substitui o conteúdo atual pela mensagem de status
     resultsSection.replaceChildren(title, status);
 }

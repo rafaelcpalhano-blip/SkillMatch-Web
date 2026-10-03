@@ -1,43 +1,51 @@
-
-
-class Vaga {                   // Classe com constructor, atributos e método
-    constructor(empresa, cargo, requisitos) { // Constructor da classe
+// Classe base para representar uma vaga
+class Vaga {
+    constructor(empresa, cargo, requisitos) {
         this.empresa = empresa;
         this.cargo = cargo;
         this.requisitos = requisitos;
 
     };
 
-    apresentarVaga() {         // Método da classe
-        return `Vaga ${this.cargo}, na empresa ${this.empresa}`; // Método utilizando this
+    // Retorna uma apresentação básica da vaga
+    apresentarVaga() {
+        return `Vaga ${this.cargo}, na empresa ${this.empresa}`;
     };
 
-    analisarVaga(candidato) { //  Função principal de análise de cada vaga
-        const requisitosAtendidos = this.requisitos.filter((requisito) => { // filter seleciona requisitos atendidos
-            return candidato.habilidades.find((habilidade) => { // find procura uma habilidade correspondente
-                return habilidade === requisito; //  Comparação entre habilidade e requisito
-            });
-        });
-        const requisitosFaltantes = this.requisitos.filter((requisito) => { //  filter identifica requisitos faltantes
-            return !candidato.habilidades.find((habilidade) => { //  find verifica se a habilidade não existe no candidato
+    // Analisa a compatibilidade entre o candidato e os requisitos da vaga
+    analisarVaga(candidato) {
+        // Filtra os requisitos que o candidato possui
+        const requisitosAtendidos = this.requisitos.filter((requisito) => {
+            return candidato.habilidades.find((habilidade) => {
                 return habilidade === requisito;
             });
         });
 
-        const percentualCompatibilidade = //  Cálculo do percentual de compatibilidade
-            (requisitosAtendidos.length / this.requisitos.length) * 100; // Toda extenção de requisitos atendidos ÷ total de requisitos × 100
+        // Filtra os requisitos que o candidato ainda não possui
+        const requisitosFaltantes = this.requisitos.filter((requisito) => {
+            return !candidato.habilidades.find((habilidade) => {
+                return habilidade === requisito;
+            });
+        });
+
+        // Calcula o percentual de compatibilidade
+        const percentualCompatibilidade =
+            (requisitosAtendidos.length / this.requisitos.length) * 100;
 
 
-        let classificacao;  // Variável que recebe a classificação
+        // Define a classificação conforme o percentual obtido
+        let classificacao;
 
-        if (percentualCompatibilidade >= 80) {          // Entre 80 a 100 = Alta Compatibilidade
+        if (percentualCompatibilidade >= 80) {
             classificacao = "Alta Compatibilidade!";
-        } else if (percentualCompatibilidade >= 50) {   // Entre 50 a 79 = Média Compatibilidade
+        } else if (percentualCompatibilidade >= 50) {
             classificacao = "Média Compatibilidade!";
-        } else {                                        // 0 a 49 = Baixa Compatibilidade
+        } else {
             classificacao = "Baixa Compatibilidade!"
         }
-        return { // Retorna objeto com o resultado completo da análise
+
+        // Retorna os dados completos da análise
+        return {
             empresa: this.empresa,
             cargo: this.cargo,
             requisitosAtendidos,
@@ -50,19 +58,18 @@ class Vaga {                   // Classe com constructor, atributos e método
 
 };
 
-export class VagaFrontEnd extends Vaga { // Herança com extends
+// Subclasse especializada em vagas de Front-End
+export class VagaFrontEnd extends Vaga {
     constructor(empresa, cargo, requisitos, experiencia, area) {
-        super(empresa, cargo, requisitos); // super chama o constructor da classe Vaga
-        this.experiencia = experiencia; // Subclasse adiciona novo atributo e utiliza this
+        super(empresa, cargo, requisitos);
+        this.experiencia = experiencia;
         this.area = area;
     };
 
+    // Complementa a apresentação da vaga com a experiência exigida
     apresentarVaga() {
         const descricaoVaga = super.apresentarVaga();
         return `${descricaoVaga}. Experiência exigida: ${this.experiencia}`;
     }
 
 };
-
-
-

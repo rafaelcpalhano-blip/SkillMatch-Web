@@ -1,96 +1,132 @@
 [
-    {
-        "empresa": "PixelCode Digital",
-        "cargo": "Programador Web Júnior",
-        "area": "Desenvolvimento Web",
-        "requisitos": [
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "React",
-            "Git"
-        ],
-        "experiencia": "6 meses"
-    },
-    {
-        "empresa": "TechNova Sistemas",
-        "cargo": "Desenvolvedor Front-End Júnior",
-        "area": "Desenvolvimento Front-End",
-        "requisitos": [
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "Git",
-            "Responsividade"
-        ],
-        "experiencia": "6 meses"
-    },
-    {
-        "empresa": "WebStart Solutions",
-        "cargo": "Desenvolvedor React Júnior",
-        "area": "Desenvolvimento React",
-        "requisitos": [
-            "JavaScript",
-            "React",
-            "Git",
-            "APIs",
-            "Responsividade"
-        ],
-        "experiencia": "1 ano"
-    },
-    {
-        "empresa": "Órbita Tecnologia",
-        "cargo": "Desenvolvedor Front-End Júnior",
-        "area": "Desenvolvimento Front-End",
-        "requisitos": [
-            "JavaScript",
-            "React",
-            "TypeScript",
-            "APIs",
-            "Testes automatizados"
-        ],
-        "experiencia": "1 ano"
-    },
-    {
-  "empresa": "Ponte Digital",
-  "cargo": "Desenvolvedor Web Júnior",
-  "area": "Desenvolvimento Web",
-  "requisitos": ["HTML", "CSS", "JavaScript", "Git", "APIs"],
-  "experiencia": "1 ano"
-},
-{
-  "empresa": "Farol Web Studio",
-  "cargo": "Desenvolvedor de Interfaces Web",
-  "area": "Desenvolvimento Web",
-  "requisitos": ["HTML", "CSS", "JavaScript", "Responsividade", "TypeScript"],
-  "experiencia": "2 anos"
-},
-{
-  "empresa": "Horizonte Sistemas",
-  "cargo": "Desenvolvedor Front-End Júnior",
-  "area": "Desenvolvimento Front-End",
-  "requisitos": ["HTML", "CSS", "JavaScript", "Responsividade", "APIs"],
-  "experiencia": "1 ano"
-},
-{
-  "empresa": "Mosaico Tecnologia",
-  "cargo": "Desenvolvedor de Interfaces Front-End",
-  "area": "Desenvolvimento Front-End",
-  "requisitos": ["HTML", "CSS", "Git", "Responsividade", "Testes automatizados"],
-  "experiencia": "2 anos"
-},
-{
-  "empresa": "Trilha Aplicações",
-  "cargo": "Desenvolvedor React Júnior",
-  "area": "Desenvolvimento React",
-  "requisitos": ["HTML", "JavaScript", "React", "Git", "Responsividade"],
-  "experiencia": "6 meses"
-},
-{
-  "empresa": "Vértice Software",
-  "cargo": "Desenvolvedor React",
-  "area": "Desenvolvimento React",
-  "requisitos": ["JavaScript", "React", "TypeScript", "APIs", "Testes automatizados"],
-  "experiencia": "2 anos"
-}
+  {
+    "empresa": "PixelCode Digital",
+    "cargo": "Programador Web Júnior",
+    "area": "Desenvolvimento Web",
+    "requisitos": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Git"
+    ],
+    "experiencia": "6 meses"
+  },
+  {
+    "empresa": "TechNova Sistemas",
+    "cargo": "Desenvolvedor Front-End Júnior",
+    "area": "Desenvolvimento Front-End",
+    "requisitos": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Git",
+      "Responsividade"
+    ],
+    "experiencia": "6 meses"
+  },
+  {
+    "empresa": "WebStart Solutions",
+    "cargo": "Desenvolvedor React Júnior",
+    "area": "Desenvolvimento React",
+    "requisitos": [
+      "JavaScript",
+      "React",
+      "Git",
+      "APIs",
+      "Responsividade"
+    ],
+    "experiencia": "1 ano"
+  },
+  {
+    "empresa": "Órbita Tecnologia",
+    "cargo": "Desenvolvedor Front-End Júnior",
+    "area": "Desenvolvimento Front-End",
+    "requisitos": [
+      "JavaScript",
+      "React",
+      "TypeScript",
+      "APIs",
+      "Testes automatizados"
+    ],
+    "experiencia": "1 ano"
+  },
+  {
+    "empresa": "Ponte Digital",
+    "cargo": "Desenvolvedor Web Júnior",
+    "area": "Desenvolvimento Web",
+    "requisitos": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Git",
+      "APIs"
+    ],
+    "experiencia": "1 ano"
+  },
+  {
+    "empresa": "Farol Web Studio",
+    "cargo": "Desenvolvedor de Interfaces Web",
+    "area": "Desenvolvimento Web",
+    "requisitos": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Responsividade",
+      "TypeScript"
+    ],
+    "experiencia": "2 anos"
+  },
+  {
+    "empresa": "Horizonte Sistemas",
+    "cargo": "Desenvolvedor Front-End Júnior",
+    "area": "Desenvolvimento Front-End",
+    "requisitos": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Responsividade",
+      "APIs"
+    ],
+    "experiencia": "1 ano"
+  },
+  {
+    "empresa": "Mosaico Tecnologia",
+    "cargo": "Desenvolvedor de Interfaces Front-End",
+    "area": "Desenvolvimento Front-End",
+    "requisitos": [
+      "HTML",
+      "CSS",
+      "Git",
+      "Responsividade",
+      "Testes automatizados"
+    ],
+    "experiencia": "2 anos"
+  },
+  {
+    "empresa": "Trilha Aplicações",
+    "cargo": "Desenvolvedor React Júnior",
+    "area": "Desenvolvimento React",
+    "requisitos": [
+      "HTML",
+      "JavaScript",
+      "React",
+      "Git",
+      "Responsividade"
+    ],
+    "experiencia": "6 meses"
+  },
+  {
+    "empresa": "Vértice Software",
+    "cargo": "Desenvolvedor React",
+    "area": "Desenvolvimento React",
+    "requisitos": [
+      "JavaScript",
+      "React",
+      "TypeScript",
+      "APIs",
+      "Testes automatizados"
+    ],
+    "experiencia": "2 anos"
+  }
 ]
