@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Histórico de candidatos analisados no SkillMatch.">
+    <link rel="stylesheet" href="../assets/styles/index.styles.css">
+    <title>Histórico SkillMatch</title>
+</head>
+
+<body>
+    <!-- Cabeçalho com logo e navegação principal -->
+    <header>
+        <h1>
+            <img src="../assets/images/Título - logo.png" alt="Skill Match" width="600" height="200">
+        </h1>
+        <nav aria-label="Navegação principal">
+            <a href="../index.html">Novo Candidato</a>
+            <a href="./historic.html">Histórico</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Área destinada ao histórico de candidatos analisados -->
+        <section aria-labelledby="history-title">
+            <h2 id="history-title">Histórico de Candidatos</h2>
+
+            <!-- Lista preenchida dinamicamente pelo JavaScript -->
+            <div id="history-list">
+                <p>Nenhum candidato cadastrado até o momento.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé com informações do projeto -->
+    <footer>
+        <p>© 2026 Skill Match — Desenvolvido por Rafael para fins educacionais.</p>
+        <p>
+            Contato:
+            <a href="mailto:rafaelcpalhano@gmail.com">rafaelcpalhano@gmail.com</a>
+        </p>
+    </footer>
+
+    <!-- JavaScript responsável por carregar e exibir o histórico -->
+    <script type="module" src="../assets/scripts/history.js"></script>
+</body>
+
+</html>

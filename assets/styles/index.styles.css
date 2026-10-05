@@ -1,9 +1,202 @@
+/* Reset básico e padronização do box model */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilo geral da página */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #000000;
+    background-color: #008080;
+}
+
+/* Estrutura principal centralizada */
+header,
+main,
+footer {
+    width: 92%;
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: #c0c0c0;
+}
+
+/* Cabeçalho */
+header {
+    margin-top: 24px;
+    padding: 8px;
+    border: 2px solid #ffffff;
+}
+
+/* Título principal */
 h1 {
-    color: red;
+    padding: 6px 10px;
+    margin-bottom: 12px;
+    font-size: 24px;
+    color: #ffffff;
+    background-color: #000080;
+}
+
+/* Logo do projeto */
+h1 img {
+    width: 250px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Navegação principal */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 4px;
+}
+
+/* Conteúdo principal */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+    border: 2px solid #808080;
+}
+
+/* Seções de conteúdo */
+section {
+    padding: 12px;
+    border: 1px solid #808080;
+}
+
+/* Títulos das seções */
+h2 {
+    padding: 4px 8px;
+    margin-bottom: 16px;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #000080;
+}
+
+/* Organização do formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Grupos de opções do formulário */
+fieldset {
+    padding: 12px;
+    border: 1px solid #808080;
+}
+
+legend {
+    padding: 0 6px;
+    font-weight: bold;
+}
+
+/* Remove a marcação padrão das listas */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* Padronização dos controles do formulário */
+input,
+select,
+button {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+/* Campos de texto e seleção */
+input[type="text"],
+select {
+    padding: 8px;
+    border: 2px solid #808080;
+    background-color: #ffffff;
+}
+
+/* Links de navegação e botões */
+nav a,
+button {
+    padding: 6px 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #000000;
+    background-color: #c0c0c0;
+    border: 2px solid #808080;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Efeito ao passar o cursor */
+nav a:hover,
+button:hover {
+    background-color: #d8d8d8;
+}
+
+/* Efeito ao clicar */
+nav a:active,
+button:active {
+    background-color: #000080;
+    color: #ffffff;
+}
+
+/* Mensagens de validação */
+#skills-error,
+#name-error {
+    color: #800000;
+}
+
+/* Cards de resultados e histórico */
+#results li,
+#history-list article {
+    margin-bottom: 16px;
+    padding: 12px;
+    border: 1px solid #808080;
+    background-color: #ffffff;
+}
+
+/* Destaque visual da vaga recomendada */
+.recommended-job {
+    border-left: 4px solid #000080;
+}
+
+/* Rodapé */
+footer {
+    padding: 12px;
+    margin-bottom: 24px;
+    text-align: center;
+    border: 2px solid #808080;
+    font-size: 13px;
+}
+
+/* Texto que identifica a vaga recomendada */
+.recommended-label {
+    color: #008000;
+    font-weight: bold;
+}
+
+/* Organização dos resultados em cards */
+#results ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+#results li {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+/* Exibe dois cards por linha em telas maiores */
+@media (min-width: 760px) {
+    #results li {
+        width: 48%;
+    }
 }
