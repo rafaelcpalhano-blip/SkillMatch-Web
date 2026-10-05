@@ -153,7 +153,7 @@ As sugestões foram aplicadas manualmente, revisadas e testadas ao longo do dese
 
 - **Repositório:** [Acessar o repositório](https://github.com/rafaelcpalhano-blip/SkillMatch-Web)
 - **Kanban / Trello:** [Acessar o Trello](https://trello.com/b/URE6JVAB/projeto-avaliativo-final-rafael)
-- **Vídeo de apresentação:** Em preparação.
+- **Vídeo de apresentação:** [Acessar o Drive](https://drive.google.com/file/d/1OXTHY8gS0qVqKRlpiRi70CDAgqBaIo0d/view?usp=sharing)
 
 ## Autor
 
